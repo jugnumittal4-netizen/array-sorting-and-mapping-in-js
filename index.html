@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> mapping</title>
+<head>
+    <meta charset="UTF-8">
+    <title>evaluating
+
+    </title>
     </head>
-    <h2>mapping</h2>
-    <p id = "demo"></p>
-    <script>
-        const numbers = [1, 4, 9];
-        function myFunction(num) {
-            return num * 10;
-        }
-        var newarray = numbers.map(myFunction);
-        document.getElementById("demo").innerHTML = newarray;
-        </script>
-        </body>
+    <body>
+        <h2>evaluating variable</h2>
+        <p id = "demo"></p>
+        <button onclick="myFunction()"> click me </button>
+        <script>
+            function myFunction() {
+                var x = 20;
+                var y = 10;
+              var a = eval(x * y ) + "<br>";
+                var b = eval(x / y ) + "<br>";
+                var c = eval(x + y ) + "<br>";
+                var res = a + b + c;
+                document.getElementById("demo").innerHTML = res;
+            }
+            </script>
+            
+           
+
+    </body>
 </html>
