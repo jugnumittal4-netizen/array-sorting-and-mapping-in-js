@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p> ascending order and mapping for array</p>
+        <h2 id = "demo"></h2>
+        <button onclick="ascending()"> ascending </button>
+        <button onclick="descending()"> descending </button>
+        <button onclick="myfunction()"> mapping </button>
+        <script>
+            var num = [5, 2, 9, 1, 5, 6];
+            function myfunction() {
+                var res = num.map(function(x) {
+                    return x * 50;
+                });
+               var newarray = num.map(myfunction)
+               document.getElementById("demo").innerHTML = "The mapped rules are: " + newarray;
+
+            }
+            function ascending() {
+                num.sort(function(a, b) {
+                    return a - b;
+                });
+                document.getElementById("demo").innerHTML = "The sorted array in ascending order is: " + num;
+            }
+            function descending() {
+                num.sort(function(a, b) {
+                    return b - a;
+                });
+                document.getElementById("demo").innerHTML = "The sorted array in descending order is: " + num;
+            }
+        </script>
+    </body>
+</html>
